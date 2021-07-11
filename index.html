@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/style.css"></link>
+    <link rel="stylesheet" href="static/css/menuIcon.css"></link>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Crimson+Text&family=Source+Serif+Pro:ital@1&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+
+      <div style="position: fixed; top: 0; right: 0; z-index: 999;">
+        <div class="wrapper-menu">
+          <div class="line-menu half start"></div>
+          <div class="line-menu"></div>
+          <div class="line-menu half end"></div>
+        </div>
+      </div>
+
+
+      <!-- Col-2 -->
+      <div class="info">  
+        <div class="info-content  ">
+          <h1 class='dept-name'>Department of Information Technology</h1>
+          <p>The Department of Information Technology,<br> University Institute of Technology <br> Rajiv Gandhi Proudyogiki Vishvavidyalaya, Bhopal.</p> <br>
+          <div class="hod">
+            <img src="static/images/hod.jpg" class="profile-pic" alt="">
+            <p class="hod-info"> Er. Ashutosh Gupta <br><span class="designation">Head of Department</span></p>
+          </div>
+          <ul class="overview-list">
+            <li><a href="#">Department Overview</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Academic Facilities</a></li>
+            <li><a href="#">Contact & Location</a></li>
+            <li><a href="#">Campus Partners</a></li>
+          </ul>
+          <span class="go-to-dept"><a href="#"> GO TO DEPARTMENT&nbsp&nbsp&nbsp&nbsp </a>
+            <span style="font-family: font-head;font-size: 1rem;"> &#8250;</span> 
+          </div>
+      </div>
+
+      <!-- Col-1 -->
+      <div class="chat">
+        <div class="chat-content"> 
+        <img src="static/images/logo003.png" alt="" class="logo" id="logo">
+
+          <div class="messages">
+            <br><br>
+            <div class="chat-bubble--bot chat-bubble ">
+              <img src="static/images/bot.png" alt="" class="chat-bubble-pic chat-bubble-pic--bot"> 
+              <div class="chat-bubble-text-container chat-bubble-text-container--bot">
+                <span class="chat-bubble-text-content">Hello. Welcome to Department of Information Technology. I'm SAAS, your virtual assistant. <br> How may I help you?</span>
+              </div> 
+            </div>
+
+            <div class="chat-bubble--user chat-bubble ">
+              <img src="static/images/user.png" alt="" class="chat-bubble-pic"> 
+              <div class="chat-bubble-text-container chat-bubble-text-container--user">
+                <span class="chat-bubble-text-content">Hello SAAS. I'm Ashutosh, Your designer. <br> Let's see what people want to ask.</span>
+              </div> 
+            </div>
+
+              <div class="chat-bubble--bot chat-bubble ">
+                <img src="static/images/bot.png" alt="" class="chat-bubble-pic chat-bubble-pic--bot"> 
+                <div class="chat-bubble-text-container chat-bubble-text-container--bot">
+                  <span class="chat-bubble-text-content">I am really excited!! Please go ahead and ask me anything.</span>
+                </div> 
+              </div>
+
+          </div>
+          <div class="chat-text-area-container">
+            
+            <textarea placeholder="Type here (or) Press Space to activate voice command." name="How can I help you?" id="chat-text-area"></textarea>
+            <img src="static/images/mic.png" id="mic"> 
+            <img src="static/images/send.png" id="send"> 
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar">
+        
+      </div>
+      
+      <!-- <h1>Chat</h1> -->
+    </div>
+  <!-- <div class="sidebar"><p> </p></div> -->
+
+  <script src = "static/js/menuIcon.js"></script>
+  <script src = "static/js/script.js"></script>
+  </body>
+</html>

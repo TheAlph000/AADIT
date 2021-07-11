@@ -1,0 +1,579 @@
+:root {
+  --primary-color: rgb(5, 5, 5);
+  --secondry-color: rgb(72, 53, 30);
+  --secondry-color-transparent: rgba(72, 53, 30, 0.5);
+  --text-color: rgb(255, 255, 255);
+  --text-color-transparent: rgba(255, 255, 255, 0.7);
+  --division-color: rgba(255, 255, 255, 0.3);
+  --chat-bubble-color: rgba(50, 35, 16, 0.8);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Crimson+Text&family=Source+Serif+Pro:ital@1&display=swap");
+
+@font-face {
+  font-family: font-head;
+  src: url(../fonts\UtopiaStd-Disp.otf);
+}
+@font-face {
+  font-family: font-content;
+  src: url(../fonts/Avenir-LT-Std-45-Book_5171.ttf);
+}
+
+@font-face {
+  font-family: font-content-light;
+  src: url(../fonts/AvenirNextLTPro-UltLt.ttf);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+body {
+  background-color: var(--primary-color);
+
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: font-head;
+  color: #fff;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #fff;
+  font-family: font-content-light;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  transform: translateX(50);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: rgba(0, 0, 0, 0);
+  transform: translateX(50);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
+  background-color: var(--secondry-color);
+  transform: translateX(50);
+}
+
+/* :hover::-webkit-scrollbar {
+  width: 4px;
+  transition: width 1s;
+} */
+
+/* SAAS LOGO  */
+
+.logo {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 12rem;
+  /* padding: 1.5rem 0 0 1rem; */
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo {
+    display: flex;
+    padding-left: 5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    width: 12rem;
+  }
+}
+
+/* MAIN FLEX CONTAINER HOLDING CHAT AND INFO COLUMNS */
+
+.main-container {
+  display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    display: flex;
+    height: 100vh;
+  }
+}
+
+/* DEPARTMENT INFORMATION START HERE */
+.info {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .info {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .info {
+    display: flex;
+    order: 2;
+    flex: 0.8;
+    background-color: var(--primary-color);
+    text-align: left;
+    overflow-y: scroll;
+    /* margin-top: 13vh; */
+    /* align-self: safe center; */
+    align-items: center; /*remove to enable scrollbar*/
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .info {
+    flex: 1;
+  }
+}
+
+.info-content {
+  margin-left: 5rem;
+  padding: 10rem 4rem 3rem 0rem;
+  /* margin: auto; remove to enable scrollbar */
+}
+@media only screen and (min-width: 550px) {
+  .info-content {
+    padding-left: 4rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .info-content {
+    padding-left: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .info-content {
+    padding-right: 0rem;
+    padding: 0 0 0 0;
+    margin-right: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column; */
+    /* position: fixed; */
+    padding: 0 0 0 0;
+    height: auto;
+    margin-left: 4rem;
+    margin-right: 50%;
+    padding-right: 5%;
+    overflow-y: auto;
+    /* overflow-y: scroll; */
+    /* margin-top: 12rem; */
+  }
+}
+
+.dept-name {
+  font-family: font-head;
+  font-size: 2.3rem;
+  font-weight: 200;
+  display: block;
+  margin-bottom: -0.5rem;
+  /* padding-top: 1rem; */
+}
+
+.hod {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.5rem 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  display: flexbox;
+  border-bottom: 0.5px solid var(--division-color);
+  border-top: 0.5px solid var(--division-color);
+}
+
+@media only screen and (min-width: 540px) {
+  .hod {
+    margin-right: 40%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hod {
+    margin-right: 50%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hod {
+    margin-right: 0;
+  }
+}
+
+.profile-pic {
+  width: 3rem;
+  border: 2px solid var(--text-color);
+  border-radius: 3rem;
+}
+
+.hod-info {
+  font-size: 0.9rem;
+  letter-spacing: 0.06rem;
+  line-height: 1.5rem;
+  padding-left: 1rem;
+  top: 50%;
+  font-family: font-head;
+}
+
+.hod-info .designation {
+  letter-spacing: 0rem;
+
+  font-family: font-content-light;
+  font-size: 0.7rem;
+  color: var(--text-color-transparent);
+}
+
+.overview-list {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  line-height: 2.5rem;
+  list-style-type: none;
+  padding-top: 1.2rem;
+  padding-left: 0px;
+  padding-bottom: 4rem;
+  margin-bottom: 1.5rem;
+  font-family: font-content;
+  font-weight: 550;
+  border-bottom: 0.5px solid var(--division-color);
+}
+
+.overview-list a {
+  text-decoration: none;
+  color: var(--text-color);
+  
+}
+
+@media only screen and (min-width: 768px) {
+  .overview-list {
+    margin-right: 5rem;
+  }
+}
+
+.go-to-dept {
+  font-family: font-content;
+  font-size: 0.6rem;
+  color: var(--text-color);
+}
+
+.go-to-dept a  {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* SIDEBAR START HERE */
+
+.sidebar {
+  background-color: var(--secondry-color);
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 75%;
+  height: 100%;
+  z-index: 3;
+  transition: all 0.5s;
+}
+@media only screen and (min-width: 1024px) {
+  .sidebar {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .sidebar {
+    background-color: var(--secondry-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 72%;
+    width: 40%;
+    height: 100%;
+    z-index: 3;
+  }
+}
+
+/* CHAT SECTION START HERE */
+
+.chat {
+  background-image: url("../images/bg.jpg");
+}
+
+/* @media only screen and (min-width: 1024px) {
+  .chat {
+    order: 1;
+    display: flex;
+    flex: 1;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+} */
+
+@media only screen and (min-width: 1024px) {
+  .chat {
+    order: 1;
+    display: flex;
+    flex: 0.78;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/* @media only screen and (min-width: 1024px) { */
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* } */
+
+.messages {
+  min-height: 35rem;
+  width: 100%;
+  margin-top: 20%;
+  height: 90vh;
+  overflow-y: auto;
+  /* box-shadow: inset 0px 20px 50px 0px  rgba(255,0,0,1); */
+
+  /* margin-top: 20%; */
+}
+
+@media only screen and (min-width: 1024px) {
+  .messages {
+    min-height: 8rem;
+    width: 100%;
+    margin-top: 25%;
+    height: 75%;
+    /* margin-top: 20%; */
+  }
+}
+
+.chat-text-area-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--primary-color);
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+@media only screen and (min-width: 532px) {
+  .chat-text-area-container {
+    width: auto;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+/* @media only screen and (min-width: 1024px) {
+  .chat-text-area-container {
+    width: fit-content;
+    margin: auto;
+  }
+} */
+
+#chat-text-area {
+  height: 3rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 23rem;
+  font-family: font-content;
+  font-weight: lighter;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  border: none;
+  background-color: transparent;
+  border-radius: 0.5rem 0.5rem;
+  resize: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #chat-text-area {
+    width: 35rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #chat-text-area {
+    width: 23rem;
+  }
+}
+
+/* @media only screen and (min-width: 600px) {
+  #chat-text-area {
+    
+  }
+} */
+textarea::placeholder {
+  font-family: font-content;
+  font-size: 0.8rem;
+}
+textarea:focus {
+  outline: none !important;
+  /* border-color: var(--secondry-color-transparent);
+  box-shadow: 0 0 10px var(--secondry-color-transparent); */
+}
+
+#mic {
+  display: block;
+  flex-direction: row;
+  /* left: 2rem;
+  bottom: 3.7rem; */
+  margin-left: 1rem;
+  height: 1.5rem;
+  width: 2rem;
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+#send {
+  display: block;
+  flex-direction: row;
+  /* left: 2rem;
+  bottom: 3.7rem; */
+  margin-left: 1rem;
+  height: 1.3rem;
+  width: 1.7rem;
+  opacity: 0.65;
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+
+/* .send {
+  font-family: font-content;
+  font-size: 0.7rem;
+  background: none;
+  padding: 0.5rem 2.5rem 0.5rem 3rem;
+  border: none;
+  border-left: 1px solid rgb(50, 50, 50);
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+  right: 0.5rem;
+} */
+
+.chat-bubble {
+  display: flex;
+  padding: 1rem;
+}
+
+.chat-bubble--bot {
+  margin-left: 0.5rem;
+  flex-direction: row;
+  margin-right: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .chat-bubble--bot {
+    margin-left: 4rem;
+    margin-right: 14rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .chat-bubble--bot {
+    margin-left: 1rem;
+    margin-right: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .chat-bubble--bot {
+    margin-left: 3rem;
+    margin-right: 12rem;
+  }
+}
+
+.chat-bubble--user {
+  flex-direction: row-reverse;
+  margin-right: 0.5rem;
+  margin-left: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .chat-bubble--user {
+    margin-right: 3rem;
+    margin-left: 12rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .chat-bubble--user {
+    flex-direction: row-reverse;
+    margin-right: 1rem;
+    margin-left: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .chat-bubble--user {
+    flex-direction: row-reverse;
+    margin-right: 3rem;
+    margin-left: 12rem;
+  }
+}
+
+.chat-bubble-pic {
+  border-radius: 2rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.7rem 0 0.7rem;
+}
+
+.chat-bubble-text-container {
+  display: flex;
+  background-color: var(--chat-bubble-color);
+}
+
+.chat-bubble-text-container--bot {
+  border-radius: 0 0.3rem 0.3rem 0.3rem;
+}
+
+.chat-bubble-text-container--user {
+  border-radius: 0.3rem 0 0.3rem 0.3rem;
+}
+
+.chat-bubble-text-content {
+  display: flex;
+  font-family: font-content-light;
+  font-size: 0.7rem;
+  letter-spacing: 0.025rem;
+  align-self: center;
+  padding: 1rem;
+  color: var(--text-color);
+  font-weight: bolder;
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+  display: none !important;
+}
