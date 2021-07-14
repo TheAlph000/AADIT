@@ -1,7 +1,8 @@
 :root {
-  --primary-color: rgb(5, 5, 5);
-  --secondry-color: rgb(72, 53, 30);
-  --secondry-color-transparent: rgba(72, 53, 30, 0.5);
+  --primary-color: rgb(30, 30, 30);
+  /* --secondry-color: rgb(19, 39, 70); */
+  --secondry-color: rgb(19, 39, 70);
+  --secondry-color-transparent: rgba(19, 39, 70, 0.5);
   --text-color: rgb(255, 255, 255);
   --text-color-transparent: rgba(255, 255, 255, 0.7);
   --division-color: rgba(255, 255, 255, 0.3);
@@ -12,7 +13,7 @@
 
 @font-face {
   font-family: font-head;
-  src: url(../fonts\UtopiaStd-Disp.otf);
+  src: url(../fonts/UtopiaStd-Disp.otf);
 }
 @font-face {
   font-family: font-content;
@@ -23,10 +24,19 @@
   font-family: font-content-light;
   src: url(../fonts/AvenirNextLTPro-UltLt.ttf);
 }
+@font-face {
+  font-family: font-content-bold;
+  src: url(../fonts/AvenirLTStd-Black.otf);
+}
+
 
 html,
 body {
   overflow-x: hidden;
+}
+a{
+  color: #fff;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -49,13 +59,7 @@ h1 {
   color: #fff;
 }
 
-p {
-  font-size: 0.9rem;
-  color: #fff;
-  font-family: font-content-light;
-  line-height: 1.5rem;
-  font-weight: 600;
-}
+
 
 ::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
@@ -154,6 +158,14 @@ p {
   padding: 10rem 4rem 3rem 0rem;
   /* margin: auto; remove to enable scrollbar */
 }
+
+.info-content p {
+  font-size: 0.9rem;
+  color: #fff;
+  font-family: font-content;
+  line-height: 1.5rem;
+}
+
 @media only screen and (min-width: 550px) {
   .info-content {
     padding-left: 4rem;
@@ -192,23 +204,24 @@ p {
 
 .dept-name {
   font-family: font-head;
-  font-size: 2.3rem;
-  font-weight: 200;
+  font-size: 3rem;
+  font-weight: 400;
   display: block;
-  margin-bottom: -0.5rem;
+  margin-bottom: 0rem;
   /* padding-top: 1rem; */
 }
 
 .hod {
   display: flex;
   align-items: center;
-  margin: 0 0 0.5rem 0;
+  margin: 1.5rem 0 -0.5rem 0;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   display: flexbox;
   border-bottom: 0.5px solid var(--division-color);
   border-top: 0.5px solid var(--division-color);
 }
+
 
 @media only screen and (min-width: 540px) {
   .hod {
@@ -234,18 +247,19 @@ p {
 }
 
 .hod-info {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   letter-spacing: 0.06rem;
   line-height: 1.5rem;
   padding-left: 1rem;
   top: 50%;
   font-family: font-head;
+  font-weight: 600;
 }
 
 .hod-info .designation {
   letter-spacing: 0rem;
-
   font-family: font-content-light;
+  font-weight: 300;
   font-size: 0.7rem;
   color: var(--text-color-transparent);
 }
@@ -261,7 +275,7 @@ p {
   padding-bottom: 4rem;
   margin-bottom: 1.5rem;
   font-family: font-content;
-  font-weight: 550;
+  font-weight: bolder;
   border-bottom: 0.5px solid var(--division-color);
 }
 
@@ -279,7 +293,8 @@ p {
 
 .go-to-dept {
   font-family: font-content;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
+  font-weight: bolder;
   color: var(--text-color);
 }
 
@@ -296,6 +311,7 @@ p {
   top: 0;
   left: 100%;
   width: 75%;
+  height: 100vh;
   height: 100%;
   z-index: 3;
   transition: all 0.5s;
@@ -321,7 +337,7 @@ p {
 /* CHAT SECTION START HERE */
 
 .chat {
-  background-image: url("../images/bg.jpg");
+  background-image: url("../images/bg.png");
 }
 
 /* @media only screen and (min-width: 1024px) {
@@ -340,7 +356,7 @@ p {
     order: 1;
     display: flex;
     flex: 0.78;
-    background-image: url("../images/bg.jpg");
+    background-image: url("../images/bg.png");
     background-size: cover;
     height: 100vh;
     overflow: hidden;
@@ -551,26 +567,101 @@ textarea:focus {
 
 .chat-bubble-text-container {
   display: flex;
-  background-color: var(--chat-bubble-color);
 }
 
 .chat-bubble-text-container--bot {
   border-radius: 0 0.3rem 0.3rem 0.3rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .chat-bubble-text-container--user {
   border-radius: 0.3rem 0 0.3rem 0.3rem;
+  background-color: rgb(242, 241, 255);
+  color: var(--primary-color);
 }
 
 .chat-bubble-text-content {
   display: flex;
-  font-family: font-content-light;
+  font-family: font-content;
   font-size: 0.7rem;
   letter-spacing: 0.025rem;
   align-self: center;
-  padding: 1rem;
-  color: var(--text-color);
-  font-weight: bolder;
+  padding: 1.6rem;
+  font-weight: lighter;
+}
+
+.sidebar-content{
+  display: flex;
+  flex-direction: column;
+  flex-shrink: initial;
+  color: #fff;
+  margin: 5% 50% 10% 15%;
+  
+}
+
+.sidebar-element{
+  display: flex;
+  flex-direction: column;
+  flex-shrink: initial;
+  line-height: 0px;
+}
+.sidebar-element .sidebar-numbers{
+  /* margin-top: 2.5rem; */
+  /* margin-bottom: 2.5rem; */
+  font-size: 1.35rem;
+  font-family: font-content-bold;
+  font-weight: 100;
+}
+
+.sidebar-element .sidebar-head{
+  /* margin-top: 5px;
+  margin-bottom: 0; */
+  margin-top: 0.7rem;
+  font-size: 0.95rem;
+  font-family: font-head;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  /* display: block; */
+  /* line-height: 1rem; */
+  /* font-weight: lighter;   */
+}
+
+.sidebar-element .dropdown-item{
+  margin-top: -1rem;
+  font-family: font-content-light;
+  font-size: 0.8rem;
+  transition: all 0.5s ease;
+  margin-left: 1.5rem;
+  line-height: 0;
+}
+
+.sidebar-element .dropdown-item a{
+  margin-top: -0.5rem;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0;
+}
+
+
+.sidebar-element .sidebar-para{
+  font-family: font-content-light;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+}
+
+.notice{
+  line-height: 1.2rem !important;
+  opacity: 1;
+}
+
+.about{
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+  opacity: 0;
 }
 
 img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
