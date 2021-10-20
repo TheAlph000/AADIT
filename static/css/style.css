@@ -377,6 +377,7 @@ h1 {
   margin-top: 20%;
   height: 90vh;
   overflow-y: auto;
+  word-break: break-word;
   /* box-shadow: inset 0px 20px 50px 0px  rgba(255,0,0,1); */
 
   /* margin-top: 20%; */
@@ -596,7 +597,7 @@ textarea:focus {
   flex-direction: column;
   flex-shrink: initial;
   color: #fff;
-  margin: 5% 50% 10% 15%;
+  margin: 10% 50% 10% 15%;
   
 }
 
